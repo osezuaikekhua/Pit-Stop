@@ -1,0 +1,212 @@
+:root{
+    --red: #ff3838;
+    --white: #ffffff;
+    --black: #000000;
+
+    --red-one: #cb3568;
+    --red-two: #bd3f32;
+
+    --green-one: #56ab2f;
+    --green-two: #94d049;
+
+    --black-one: #232526;
+    --black-two: #707676;
+
+    --blue-one: #021B79;
+    --blue-two: #0575E6;
+
+    --silver: #bdc3c7;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Source+Code+Pro:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato',sans-serif;
+}
+
+.bg-red{
+    background-color: var(--red);
+}
+
+.bg-white{
+    background-color: var(--white);
+}
+
+.bg-black{
+    background-color: var(--black);
+}
+
+.bg-blue{
+    background-color: var(--blue-one);
+}
+
+.bg-green{
+    background-color: var(--green-one);
+}
+
+html,body{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.row:after, .row:before {
+    box-sizing: border-box;
+}
+
+.col-6{
+    width: 50%;
+    position: relative;
+}
+
+.slider{
+    overflow: hidden;
+    height: 500%;
+}
+
+.fullheight{
+    height: 100vh;
+}
+
+.product-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.img-wrapper img{
+    height: auto;
+    width: 78%;
+}
+
+.more-images{
+    position: absolute;
+    right: 40px;
+    top: 60%;
+}
+
+.more-images-item{
+    height: fit-content;
+    background-color: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 10px;
+    padding: 5px;
+}
+
+.more-images-item img{
+    height: auto;
+    width: 80px;
+    border-radius: 15px;
+    transition: 1s;
+}
+
+.more-images-item:hover img{
+    transform: scale(1.2);
+}
+
+.more-images-item:hover {
+    cursor: pointer;
+}
+
+.product-info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 10%;
+    color: var(--black-two);
+}
+
+.info-wrapper {
+    margin: auto;
+    position: relative;
+    text-align: right;
+}
+
+.product-name h2{
+    font-weight: 900;
+    font-size: xx-large;
+    color: var(--black);
+    margin-bottom: 30px;
+}
+
+.product-price{
+    font-weight: 900;
+    font-size: xx-large;
+    color: var(--black);
+}
+
+.product-price span{
+    font-size: large;
+    color: var(--black-two);
+}
+
+.color-wrapper{
+    display: flex;
+    flex-flow: row-reverse;
+    padding: 5px;
+}
+
+.color-wrapper > div{
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 3px;
+    border: 2px solid var(--silver);
+    background-color: var(--silver);
+}
+
+.color-wrapper > div.active{
+    border: 2px solid var(--black);
+}
+
+.color-wrapper > div:hover{
+    cursor: pointer;
+    border: 2px solid var(--black);
+}
+
+.color-wrapper > div >div{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.product-description{
+    margin: 60px 0;
+    text-align: justify;
+    font-weight: 600;
+}
+
+.button > button{
+    font-weight: 900;
+    font-size: x-large;
+    padding: 15px 60px;
+    border-radius: 30px;
+    border: 2px solid var(--black);
+    background-color: var(--white);
+    color: var(--black);
+    transition: .5s;
+}
+
+.button > button:hover{
+    cursor: pointer;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.img-col{
+    border-bottom-left-radius: 100%;
+}
