@@ -47,33 +47,3 @@ Array.from(slideControlItems).forEach((el, index) => {
 
 
 
-let modal = document.getElementById('modal')
-
-let closeBtn = document.getElementById('modal-close')
-
-closeBtn.onclick = () => {
-    modal.style.display = "none"
-}
-
-let moreImages = document.getElementsByClassName('more-images-item')
-
-let previewImages = document.getElementsByClassName('img-preview')
-
-Array.from(moreImages).forEach((el) => {
-    el.onclick = () => {
-        let imgItems = el.parentNode.getElementsByTagName('img')
-        
-        Array.from(imgItems).forEach((item, index) =>{
-            previewImages[index].scr = item.src
-        })
-
-        let img = el.querySelector('img')
-        modal.style.display = 'block'
-
-        let modalContent = modal.querySelector('.modal-content')
-        modalContent.scr = img.scr
-
-        let temp = modalContent.cloneNode(true)
-        modalContent.parentNode.replaceChild(temp, modalContent)
-    }
-})

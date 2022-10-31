@@ -47,6 +47,18 @@
     background-color: var(--green-one);
 }
 
+.bg-orange{
+    background-color: orange;
+}
+
+.bg-yellow{
+    background-color: yellow;
+}
+
+.bg-aqua{
+    background-color: aqua;
+}
+
 html,body{
     height: 100vh;
     overflow: hidden;
@@ -254,6 +266,8 @@ html,body{
 
 .modal{
     display: none;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     z-index: 100;
     padding-top: 100px;
@@ -269,8 +283,9 @@ html,body{
 .modal-content{
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    width: 600px;
+    height: 400px;
+    background-color: var(--white);
 }
 .modal-content{
     animation-name: zoom;
@@ -284,6 +299,7 @@ html,body{
         transform: scale(1);
     }
 }
+
 
 .close{
     position: absolute;
@@ -301,6 +317,70 @@ html,body{
     cursor: pointer;
 }
 
+.navbar{
+    background-color: transparent;
+    padding-top: 10px 90px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    display: flex;
+}
+
+.navbar *{
+    float: left;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+.navbar .logo{
+    font-size: 30px;
+    flex:1;
+    color: var(--black);
+
+}
+
+.navbar-right a:hover{
+    color: var(--black);
+    border-bottom: 2px solid var(--black);
+
+}
+
+.navbar-right a:active{
+    color: var(--black);
+    border-bottom: 2px solid var(--black);
+    
+}
+
+.navbar-right a{
+    transition: .5s;
+}
+
+.cart{
+    position: relative;
+}
+.cart i{
+    font-size: x-large;
+}
+
+.badge{
+    position: absolute;
+    top: 0;
+    right: 1px;
+    font-size: 12px;
+    background-color: var(--red);
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50%;
+}
 /* ANIMATION */
 
 .right-to-left{
@@ -369,4 +449,19 @@ html,body{
 
 .info-wrapper > div:nth-child(6){
     transition-delay: 1.2s;
+}
+
+.bounce{
+    animation: bounce 3s ease 5s infinite;
+}
+
+@keyframes bounce{
+    0%{
+        transform: translateY(0);
+    }50%{
+        transform: translateY(-50px);
+    }100%{
+        transform: translateY(0);
+    }
+
 }
