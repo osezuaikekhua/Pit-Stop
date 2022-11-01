@@ -20,6 +20,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Source+Code+Pro:wght@300&display=swap');
 
+
 *{
     margin: 0;
     padding: 0;
@@ -341,8 +342,19 @@ html,body{
 .navbar .logo{
     font-size: 30px;
     flex:1;
-    color: var(--black);
+    color: var(--red-two);
 
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-style: italic;
+}
+
+
+.logo img{
+    height: 100px;
 }
 
 .navbar-right a:hover{
